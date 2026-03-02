@@ -13,15 +13,26 @@ for _ in range(t):
 
     while j>=0:
         curr = a[j]
-        if flipped:
-            curr = 1-curr
 
-        if curr==b[j]:
+
+        if flipped:
+            curr = 1 - curr
+
+        if curr == b[j]:
             count[a[j]] -= 1
             j -= 1
         else:
+            
             if count[0] == count[1]:
                 flipped = not flipped
+                curr = a[j]
+                if flipped:
+                    curr = 1 - curr
+                if curr == b[j]:
+                    count[a[j]] -= 1
+                    j -= 1
+                    continue
+                
                 count[a[j]] -= 1
                 j -= 1
             else:
