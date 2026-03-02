@@ -13,8 +13,7 @@ for _ in range(t):
 
     while j>=0:
         curr = a[j]
-
-
+        
         if flipped:
             curr = 1 - curr
 
