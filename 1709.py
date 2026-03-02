@@ -6,10 +6,6 @@ for _ in range(t):
     b=[int(ch) for ch in input().split()]
 
     ans=[]
-    for i in range(n):
-        if a[i]>b[i]:
-            a[i],b[i]=b[i],a[i]
-            ans.append((3,i+1))
     
     for i in range(n):
         for j in range(n-i-1):
@@ -21,6 +17,12 @@ for _ in range(t):
             if b[j]>b[j+1]:
                 b[j],b[j+1]=b[j+1],b[j]
                 ans.append((2,j+1))
+
+    for i in range(n):
+        if a[i]>b[i]:
+            a[i],b[i]=b[i],a[i]
+            ans.append((3,i+1))
+    
     print(len(ans))
     for tup in ans:
         print(tup[0],tup[1])
