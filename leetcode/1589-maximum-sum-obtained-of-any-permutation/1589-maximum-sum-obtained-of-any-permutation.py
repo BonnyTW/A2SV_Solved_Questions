@@ -1,7 +1,7 @@
 class Solution:
     def maxSumRangeQuery(self, nums: List[int], requests: List[List[int]]) -> int:
         # nums = [1,2,3,4,5], requests = [[1,3],[0,1]]
-        # [1,1,-1,0,-1,0]->[1,2,1,1,0,0] -> [2,1,1,1,0]*[5,4,3,2,1]->[10,4,3,2,0]=19
+        # [1,1,-1,0,-1,0]->[1,2,1,1,0,0] -> max_freq = max(nums) -->[4,5,3,2,1] --------[2,1,1,1,0]*[5,4,3,2,1]->[10,4,3,2,0]=19
 
         psum=[0]*(len(nums)+1)
 
