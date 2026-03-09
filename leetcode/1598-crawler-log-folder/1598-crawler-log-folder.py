@@ -1,7 +1,5 @@
 class Solution:
     def minOperations(self, logs: List[str]) -> int:
-        stack=[]
-
         count=0
         for dir in logs:
             if dir=='./':
