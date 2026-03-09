@@ -3,16 +3,15 @@ class Solution:
         stack=[]
 
         path=path.split('/')
-        
+        print(path)
         for dir in path:
             if dir=='.' or dir=='':
                 continue
-            elif dir =='..':
+            elif dir !='..':
+                stack.append(dir)
+            else:
                 if stack:
                     stack.pop()
-            else:
-                stack.append(dir)
-
         return ('/'+'/'.join(stack))
 
         
