@@ -7,13 +7,14 @@ class Solution:
         for ch in s:
             if ch not in mydict:
                 stack.append(ch)
-                
+               
             else:
                 if not stack:
                     return False
                     
-                if stack.pop()!=mydict[ch]:
+                if stack[-1]!=mydict[ch]:
                     return False
+                stack.pop()
                 
         if len(stack)==0:
             return True
