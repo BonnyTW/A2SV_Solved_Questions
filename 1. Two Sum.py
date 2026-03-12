@@ -7,5 +7,5 @@ class Solution:
             else:
                 my_dict[nums[i]]=i
 
-
+ 
         
