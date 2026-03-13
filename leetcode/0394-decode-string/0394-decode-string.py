@@ -15,7 +15,6 @@ class Solution:
 
                 num=[]
 
-                num = []
                 while stack and stack[-1].isdigit():
                     num.append(stack.pop())
                 num = int(''.join(num[::-1]))
