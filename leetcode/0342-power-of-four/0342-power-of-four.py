@@ -4,10 +4,7 @@ class Solution:
         while n >= 4:
             n/=4
 
-        if n==1:
-            return True
-        else:
-            return False
+        return n==1
         
             
         
