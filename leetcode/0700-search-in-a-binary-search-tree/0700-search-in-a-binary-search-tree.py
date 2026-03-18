@@ -13,12 +13,10 @@ class Solution:
                 return
             if root.val == val:
                 return root
-            left=search(root.left)
-            right=search(root.right)
-            if left:
-                return left
-            return right
-        
+            if val>root.val:
+                return search(root.right)
+            else:
+                return search(root.left)
         return search(root)
         
         
