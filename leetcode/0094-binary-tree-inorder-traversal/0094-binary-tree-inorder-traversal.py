@@ -8,12 +8,12 @@ class Solution:
     def inorderTraversal(self, root: Optional[TreeNode]) -> List[int]:
         ans=[]
 
-        def preor(r):
+        def inor(r):
             if r:
-                preor(r.left)
+                inor(r.left)
                 ans.append(r.val)
                 
-                preor(r.right)
-        preor(root)
+                inor(r.right)
+        inor(root)
         return ans
         
