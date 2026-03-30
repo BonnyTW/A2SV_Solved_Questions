@@ -3,14 +3,15 @@ class Solution:
         """
         Do not return anything, modify s in-place instead.
         """
-        arr=s.copy()
-        def helper(i):
-            if i == len(s):
+        
+        def helper(l,r):
+            if l>=r:
                 return
-            helper(i+1)
-            arr[(len(s)-1)-i]=s[i]
-        helper(0)
-        s[:]=arr
+            s[l],s[r]=s[r],s[l]
+            helper(l+1,r-1)
+            
+        helper(0,len(s)-1)
+        
 
             
         
