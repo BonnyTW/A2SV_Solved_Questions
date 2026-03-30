@@ -1,10 +1,17 @@
 class Solution:
     def countGoodNumbers(self, n: int) -> int:
-        n_e=(n+1)//2
-        n_o=n//2
-        
 
-        return (pow(5,n_e,(10**9)+7)*pow(4,n_o,(10**9)+7))%((10**9)+7)
+        def power(x,n):
+            if x==0:return 0
+            if n==0:return 1
+        
+            half=power(x,n//2)
+            if n%2:
+                return (half*half*x)%((10**9)+7)
+            else:
+                return (half*half)%((10**9)+7)
+
+        return (power(5,(n+1)//2)*power(4,n//2))%((10**9)+7)
 
 
 
