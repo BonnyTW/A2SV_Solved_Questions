@@ -7,13 +7,10 @@ class Solution:
         if x==1:
             return 1
 
-        flag = False
-
         while left < right:
             mid = (left + right) // 2
 
             if mid*mid == x:
-                flag =True
                 return mid
 
             if mid*mid > x:
@@ -22,8 +19,7 @@ class Solution:
                 ans = mid
                 left = mid + 1
 
-        if not flag:
-            return ans
+        return ans
 
 
         
