@@ -4,7 +4,7 @@ class Solution:
         seen=set(nums)
         for num in seen:
             if num-1 in seen:
-                continue
+                continue 
             cur=num
             count=0
             while num in seen:
