@@ -8,7 +8,7 @@ class Solution:
             if j>=len(ranges):
                 return False
         return True
-            
+             
 
 
         
