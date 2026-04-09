@@ -14,6 +14,6 @@ class Solution:
                     break
             else:
                 ans+=len(word)
-        return (ans)
+        return (ans) 
                 
         
