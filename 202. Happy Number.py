@@ -7,7 +7,7 @@ class Solution:
                 chsqr+=int(ch)**2
             return chsqr 
 
-        seen=set()
+        seen=set() 
         
         x=splitsum(n)
         while x!=1:
