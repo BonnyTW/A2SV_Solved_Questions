@@ -16,7 +16,7 @@ class Solution:
             count[num*2]-=1
             ans.append(num)
 
-        return (ans)
+        return (ans) 
 
                         
        
