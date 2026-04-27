@@ -7,20 +7,20 @@
 class Solution:
     def isUnivalTree(self, root: Optional[TreeNode]) -> bool:
 
-        val = root.val
+        def helper(root):
 
-        dq = deque([root])
-
-        while dq:
-            node = dq.popleft()
-
-            if node.val != val:
-                return False
-
-            if node.right:
-                dq.append(node.right)
-
-            if node.left:
-                dq.append(node.left)
+            if root.left:
+                if root.val != root.left.val:
+                    return False
+                if not helper(root.left):
+                    return False
             
-        return True
+            if root.right:
+                if root.val != root.right.val:
+                    return False
+                if not helper(root.right):
+                    return False
+
+            return True
+
+        return helper(root)
