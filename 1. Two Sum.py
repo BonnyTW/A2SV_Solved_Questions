@@ -6,6 +6,6 @@ class Solution:
                 return [my_dict[target-nums[i]],i]
             else:
                 my_dict[nums[i]]=i
-
+ 
  
         
