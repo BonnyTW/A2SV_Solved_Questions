@@ -8,7 +8,7 @@ class Solution:
 
         count=Counter()
         for i in range(len(s1)):
-            if s1[i]!=s2[i]:
+            if s1[i]!=s2[i]: 
                 count[s1[i]+s2[i]]+=1 
         res=0
         for value in count.values():
