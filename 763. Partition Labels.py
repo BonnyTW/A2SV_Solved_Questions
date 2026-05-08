@@ -3,7 +3,7 @@ class Solution:
         count=Counter(s)
 
         
-        cur=set()
+        cur=set() 
         ans=[]
         prev=0
         for i in range (len(s)):
