@@ -6,7 +6,6 @@ class Solution:
         my_dict = {'a':0,'b':0,'c':0}
         freq = Counter()
 
-        
         for right in range(len(s)):
             freq[s[right]] += 1
 
@@ -14,7 +13,6 @@ class Solution:
                 count += len(s) - right 
                 freq[s[left]] -= 1
                 left +=1 
-        
         return count
 
             
