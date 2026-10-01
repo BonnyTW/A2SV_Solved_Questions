@@ -20,4 +20,29 @@ class Solution:
             return True
         return False
 
+
+''' 
+class Solution:
+    def isValid(self, s: str) -> bool:
+
+        stack = []
+
+        my_dict = {')':'(','}':'{',']':'['}
+
+        for ch in s:
+            if ch not in my_dict:
+                stack.append(ch)
+                continue
+            
+            if stack and stack[-1] == my_dict[ch]:
+                stack.pop()
+            else:
+                return False
+
+        print(stack)
+
+        if stack:
+            return False
+        return True
         
+'''
